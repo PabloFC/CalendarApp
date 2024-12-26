@@ -6,6 +6,7 @@ import { addHours } from "date-fns";
 import { localizer } from "../../helpers/calendarLocalizer";
 import { getMessagesES } from "../../helpers/getMessages";
 import { useState } from "react";
+import CalendarModal from "../components/CalendarModal";
 
 const events = [
   {
@@ -56,8 +57,6 @@ const CalendarPage = () => {
     <div>
       <Navbar />
 
-      {/* comprobar al hacer click */}
-
       <Calendar
         culture="es"
         localizer={localizer}
@@ -72,6 +71,8 @@ const CalendarPage = () => {
         onSelectEvent={onSelect}
         onView={onViewChange}
       />
+
+      <CalendarModal />
     </div>
   );
 };
