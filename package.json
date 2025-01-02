@@ -16,7 +16,8 @@
     "react-datepicker": "^7.5.0",
     "react-dom": "^18.3.1",
     "react-modal": "^3.16.3",
-    "react-router-dom": "^6.28.0"
+    "react-router-dom": "^6.28.0",
+    "sweetalert2": "^11.15.9"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
