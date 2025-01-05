@@ -8,26 +8,16 @@ import { getMessagesES } from "../../helpers/getMessages";
 import { useState } from "react";
 import CalendarModal from "../components/CalendarModal";
 import { useUiStore } from "../../hooks/UseUiStore";
-
-const events = [
-  {
-    title: "Día de Navidad",
-    notes: "Tengo que hacer la comida",
-    start: new Date(),
-    end: addHours(new Date(), 2),
-    bgColor: "#fafafa",
-    user: {
-      _id: "123",
-      name: "Pablo",
-    },
-  },
-];
+import { useCalendarStore } from "../../hooks/useCalendarStore";
 
 const CalendarPage = () => {
   const { openDateModal } = useUiStore();
+  const { events } = useCalendarStore();
+
   const [lastView, setLastView] = useState(
     localStorage.getItem("lastView") || "week"
   );
+
   const eventStyleGetter = (event, start, end, isSelected) => {
     // console.log({ event, start, end, isSelected });
 
