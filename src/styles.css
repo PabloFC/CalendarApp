@@ -38,3 +38,13 @@
   outline: none;
   padding: 10px;
 }
+/* FABS */
+/* CTL+SHIFT+P -> ordenadar de forma ascendente */
+.fab {
+  border-radius: 50%;
+  bottom: 25px;
+  font-size: 30px;
+  padding: 25px;
+  position: fixed;
+  right: 25px;
+}
