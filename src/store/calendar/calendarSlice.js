@@ -21,12 +21,6 @@ export const calendarSlice = createSlice({
     activeEvent: null,
   },
   reducers: {
-    //     onUpdateEvent: (state, { payload }) => {
-    //       state.events = state.events.map((event) =>
-    //         event.id === payload.id ? payload : event
-    //       );
-    //       state.activeEvent = null;
-    //     },
     //     onDeleteEvent: (state) => {
     //       state.events = state.events.filter(
     //         (event) => event.id !== state.activeEvent.id
@@ -40,10 +34,17 @@ export const calendarSlice = createSlice({
       state.events.push(payload);
       state.activeEvent = null;
     },
+    onUpdateEvent: (state, { payload }) => {
+      state.events = state.events.map((event) =>
+        event._id === payload._id ? payload : event
+      );
+      // state.activeEvent = null;
+    },
   },
 });
 
-export const { onSetActiveEvent, onAddNewEvent } = calendarSlice.actions;
+export const { onSetActiveEvent, onAddNewEvent, onUpdateEvent } =
+  calendarSlice.actions;
 
 // export const selectEvents = (state) => state.calendar.events;
 // export const selectActiveEvent = (state) => state.calendar.activeEvent;
