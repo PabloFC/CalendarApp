@@ -47,6 +47,3 @@ export const calendarSlice = createSlice({
 
 export const { onSetActiveEvent, onAddNewEvent, onUpdateEvent, onDeleteEvent } =
   calendarSlice.actions;
-
-// export const selectEvents = (state) => state.calendar.events;
-// export const selectActiveEvent = (state) => state.calendar.activeEvent;
